@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        runner-os: [ubuntu-latest]
+        runner-os: [windows-latest, ubuntu-latest, macos-latest]
 
     runs-on: ${{ matrix.runner-os }}
 
@@ -71,7 +71,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target-os: [ubuntu-latest]
+        target-os: [windows-latest, ubuntu-latest, macos-latest]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
