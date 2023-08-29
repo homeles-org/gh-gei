@@ -33,7 +33,7 @@ public class GhesVersionChecker
 
                 if (Version.TryParse(ghesVersion, out var parsedVersion))
                 {
-                    blobCredentialsRequired = parsedVersion < new Version(3, 8, 0);
+                    blobCredentialsRequired = true;
                 }
                 else
                 {
