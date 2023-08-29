@@ -89,22 +89,6 @@ jobs:
         SKIP_WINDOWS: "true"
         SKIP_MACOS: "true"
 
-    - name: Build Artifacts (Windows)
-      if: matrix.target-os == 'windows-latest'
-      run: ./publish.ps1
-      shell: pwsh
-      env:
-        SKIP_LINUX: "true"
-        SKIP_MACOS: "true"
-
-    - name: Build Artifacts (MacOS)
-      if: matrix.target-os == 'macos-latest'
-      run: ./publish.ps1
-      shell: pwsh
-      env:
-        SKIP_WINDOWS: "true"
-        SKIP_LINUX: "true"
-
     - name: Upload Binaries
       uses: actions/upload-artifact@v3
       with:
